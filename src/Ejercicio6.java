@@ -12,10 +12,10 @@ public class Ejercicio6 {
         int digito1;
         for (int i = 0; i < numero.length(); i++) {
             digito = numero.charAt(i);
-            digito1 = digito;
-            if (digito %2 == '0') {
+            digito1 = Integer.parseInt(String.valueOf(digito));
+            if (digito1 %2 == '0') {
                 return true;
-            } else if (digito %2 == '1') {
+            } else if (digito1 %2 == '1') {
                 return false;
             }
         }
