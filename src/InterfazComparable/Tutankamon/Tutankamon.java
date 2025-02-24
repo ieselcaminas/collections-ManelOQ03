@@ -1,4 +1,4 @@
-package InterfazComparable;
+package InterfazComparable.Tutankamon;
 
 import java.util.ArrayList;
 

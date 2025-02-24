@@ -11,6 +11,7 @@ public class Frequency {
         palabras.add("tres");
         palabras.add("dos");
         palabras.add("dos");
+        System.out.println(frequency(palabras));
     }
     public static Map<String, Integer> frequency(ArrayList<String> palabras) {
       Map<String, Integer> frequency = new HashMap<>();

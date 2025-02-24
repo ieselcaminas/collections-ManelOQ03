@@ -1,4 +1,4 @@
-package InterfazComparable;
+package InterfazComparable.Tutankamon;
 
 public class Tesoro implements Comparable<Tesoro>{
     private String nombre;

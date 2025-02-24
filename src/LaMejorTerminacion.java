@@ -4,27 +4,24 @@ import java.util.Map;
 
 public class LaMejorTerminacion {
     public static void main(String[] args) {
-        ArrayList<String> numeros = new ArrayList<>();
-        numeros.add("58975");
-        numeros.add("25894");
-        numeros.add("52985");
-        numeros.add("98598");
+        String[] numeros = {"71717", "90809", "66474"};
+        System.out.println(terminaciones(numeros));
+
     }
-    /*public static Map<String, Integer > terminaciones(ArrayList<String> numeros) {
-        Map<String, Integer> mapa = new HashMap<>();
+    public static Map<Character, Integer> terminaciones(String[] boletos){
+        Map<Character, Integer> terminaciones = new HashMap<>();
         Character ultimo;
-        Integer cont;
-        for (String numero : numeros) {
-            if (cont == null) {
-                ultimo = numero.charAt(mapa.get(numero.length()-1));
-                cont = mapa.put(ultimo, 1);
-            }else {
+        Integer contador;
 
+        for (int i = 0; i < boletos.length; i++) {
+            ultimo  = boletos[i].charAt(boletos[i].length() -1 );
+            contador = terminaciones.get(ultimo);
+            if (contador == null) {
+                terminaciones.put(ultimo, 1);
+            }else{
+                terminaciones.put(ultimo, contador + 1);
             }
-
         }
-
-
-        return mapa;
-    }*/
+        return terminaciones;
+    }
 }

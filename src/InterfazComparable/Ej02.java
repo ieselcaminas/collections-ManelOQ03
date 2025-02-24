@@ -1,21 +1,21 @@
 package InterfazComparable;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Ej02 {
-    public static void main(String[] args) throws IOException{
-        BufferedReader lector = new BufferedReader(new FileReader("files/illiterate.csv"));
-        String linea;
-        lector.readLine();
-        ArrayList<Analfabeto>a = new ArrayList();
-         while((linea = lector.readLine()) != null){
-             String[] datos = linea.split(",");
-             Analfabeto ordenadoA = new Analfabeto(datos[5], Integer.parseInt(datos[8]));
-             a.add(ordenadoA);
-         }
-        a.stream().sorted().forEach(System.out::println);
+    public static void main(String[] args) {
+        List<Human> humanList = new ArrayList<>();
+
+        Human h = new Human("Armando", 1200);
+        humanList.add(h);
+        h = new Human("Pedro", 1100);
+        humanList.add(h);
+        h = new Human("Carlos", 1500);
+        humanList.add(h);
+
+        humanList.stream()
+                .sorted()
+                .forEach(System.out::println);
     }
 }

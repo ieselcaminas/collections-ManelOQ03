@@ -1,4 +1,4 @@
-package InterfazComparable;
+package InterfazComparable.Analfabeto;
 
 public class Analfabeto implements Comparable<Analfabeto>{
     private String pais;

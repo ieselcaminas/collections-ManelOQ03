@@ -2,34 +2,47 @@ import java.util.Stack;
 
 public class Parentesis {
     public static void main(String[] args) {
-        //System.out.println(esBalanceado("{([()])}"));
+        System.out.println(esBalanceado("{})("));
     }
-    /* public static boolean esBalanceado(String cadena){
-        boolean balanceado = false;
-        char character;
+    public static boolean esBalanceado(String cadena){
+        boolean balanced;
+        char caracter;
         char ultimo;
+
         Stack<Character> pila = new Stack<>();
         for (int i = 0; i < cadena.length(); i++) {
-            //Si son apertura los pongo en la pila
-            character = cadena.charAt(i);
-            if (character == '(' || character == '{' || character == '[') {
-                pila.push(character);
-            } else if (character == ')' || character == '}' || character == ']') {
-                if (pila.isEmpty()) {
+            caracter = cadena.charAt(i);
+            if (caracter == '(' || caracter == '{' || caracter == '['){
+                pila.push(caracter);
+            } else if (caracter == ')') {
+
+                if (pila.isEmpty()){
                     return false;
                 }
                 ultimo = pila.pop();
-                //Saco de la pila y compruebo si es '['. Si no es, acabo con false
                 if (ultimo != '('){
                     return false;
                 }
-            } //else if () {
-                
+            } else if (caracter == '}') {
+                if (pila.isEmpty()){
+                    return false;
+                }
+                ultimo = pila.pop();
+                if (ultimo != '{'){
+                    return false;
+                }
+            }else if (caracter == ']') {
+                if (pila.isEmpty()){
+                    return false;
+                }
+                ultimo = pila.pop();
+                if (ultimo != '['){
+                    return false;
+                }
             }
-
         }
 
+        return pila.isEmpty();
 
-        return true;
-    }*/
+    }
 }

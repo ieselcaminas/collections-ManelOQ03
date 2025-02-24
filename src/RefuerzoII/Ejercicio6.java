@@ -1,3 +1,5 @@
+package RefuerzoII;
+
 public class Ejercicio6 {
     public static void main(String[] args) {
         String numero = "4678";
